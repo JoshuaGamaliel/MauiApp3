@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Propuesta"
+             Title="Propuesta">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Propuestas"
+                  VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            <Entry x:Name="nameEntry"
+                   Placeholder="Nombre"
+                   Keyboard="Text"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   Margin="20,20,0,0"/>
+            <Entry x:Name="detailEntry"
+                   Placeholder="Detalles"
+                   Keyboard="Text"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   Margin="20,20,0,0"/>
+            <Entry x:Name="stateEntry"
+                   Placeholder="Estado"
+                   Keyboard="Text"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   Margin="20,20,0,0"/>
+            <Button x:Name="AddPropBtn"
+                    Text="Agregar Propuesta"
+                    IsVisible="True"
+                    Clicked="OnAddClicked"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    BackgroundColor="Green"
+                    Padding="20,20,0,0"/>
+            <ListView 
+                x:Name="ListProp"
+                ItemsSource="{Binding propuestas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" Padding="12">
+                                <Label Text="{Binding Nombre}"
+                                       FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       MaximumHeightRequest="200">
+                                </Label>
+                                <Label
+                                    Text="{Binding Detalles}"/>
+                                <Label
+                                    Text="{Binding Estado}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

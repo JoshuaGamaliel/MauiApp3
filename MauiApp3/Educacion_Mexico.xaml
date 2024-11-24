@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Educacion_Mexico"
+             Title="Educacion_Mexico">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Educaciuon en mexico"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   FontSize="Title"/>
+            <Entry x:Name="estadoEntry"
+                   Placeholder="ID Estado"
+                   Keyboard="Text"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   Margin="20,20,0,0"/>
+            <Entry x:Name="levelEntry"
+                   Placeholder="ID Nivel Academico"
+                   Keyboard="Text"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Fill"
+                   Margin="20,20,0,0"/>
+            <Button x:Name="AddPropBtn"
+                    Text="Agregar"
+                    IsVisible="True"
+                    Clicked="OnAddClicked"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="Green"
+                    Padding="20,20,0,0"/>
+            <ListView x:Name="statesListView" ItemsSource="{Binding Estados}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="nameLbl" VerticalOptions="Start" Text="{Binding Estados.NombreEstado}"/>
+                                <Label x:Name="levelLbl" VerticalOptions="Start" Text="{Binding Estados.NivelAcademico}"/>
+                                <Label x:Name="pcLbl" VerticalOptions="Start" Text="{Binding Estados.PoblacionCertificada}"/>
+                                <Label x:Name="ptLbl" VerticalOptions="Start" Text="{Binding Estados.PoblacionTotal}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

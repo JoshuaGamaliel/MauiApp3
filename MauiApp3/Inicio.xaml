@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Inicio"
+             Title="Inicio">
+    <StackLayout>
+        <Label Text="Bienvenido al CED donde nuestro trabajo es mejorar la calidad de la educacion en tu pais"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+               FontSize="Title"/>
+        <Button x:Name="Propbutton"
+                Text="Propuestas"
+                Clicked="OnPropClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                BackgroundColor="Green"/>
+        <Button x:Name="EduMexBtn"
+                Text="Educacion en mexico"
+                Clicked="OnEduMexClicked"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                BackgroundColor="Red"/>
+    </StackLayout>
+</ContentPage>

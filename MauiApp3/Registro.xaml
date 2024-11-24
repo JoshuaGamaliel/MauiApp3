@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.Registro"
+             Title="Registro">
+    <StackLayout>
+
+        <Entry x:Name="usernameEntry"
+               Placeholder="Usuario"
+               Keyboard="Text"
+               HorizontalOptions="Center"/>
+
+        <Entry x:Name="passwordEntry"
+               Placeholder="Contraseña"
+               Keyboard="Text"
+               IsPassword="True"
+               HorizontalOptions="Center"/>
+
+        <Entry x:Name="emailEntry"
+               Placeholder="Correo"
+               Keyboard="Email"
+               HorizontalOptions="Center"/>
+        <!-- -->
+        <Button Text="Registrar"
+                TextColor="White"
+                BackgroundColor="Green"
+                Clicked="OnRegistrarClicked"
+                HorizontalOptions="Center"/>
+
+    </StackLayout>
+
+</ContentPage>
